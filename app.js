@@ -8,6 +8,8 @@ const userRoutes = require('./routes/user.routes');
 const transactionRoutes = require('./routes/transaction.routes');
 const loginRoutes = require('./routes/login.routes');
 const homepageRoutes = require('./routes/homepage.routes');
+const settingsRoutes = require('./routes/settings.routes');
+
 
 
 
@@ -20,11 +22,9 @@ app.use('/api/transactions', transactionRoutes);
 
 
 app.use('/api/login', loginRoutes);
-
-
-
 app.use('/api/user', homepageRoutes);
 
+app.use('/api/settings', settingsRoutes);
 
 
 const PORT = process.env.PORT || 3000;
